@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .a {
+        overflow: hidden;
+        background-color: antiquewhite;
+      }
+
+      .a a {
+        float: left;
+
+        color: deeppink;
+
+        text-align: center;
+
+        padding: 14px 16px;
+
+        text-decoration: none;
+
+        font-size: 17px;
+      }
+      .a a:hover {
+        background-color: rgb(50, 14, 231);
+        color: rgb(232, 9, 9);
+      }
+      .a a.b {
+        background-color: purple;
+        color: palevioletred;
+      }
+      .c{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+      .myslides{
+        display: flex;
+        max-height: 100%;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Navigation Bar</h1>
+    <div class="a">
+      <a href="https://www.amazon.com/" class="b">Home</a>
+      <a
+        href="https://www.amazon.com/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell"
+        >About</a
+      >
+      <a
+        href="https://www.amazon.com/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice"
+        >Contact</a
+      >
+      <a
+        href="https://www.amazon.com/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc"
+        >Reviews</a
+      >
+    </div>
+    <h1>Slider</h1>
+    <div class="c">
+      <img
+        src="https://cdn.pixabay.com/photo/2024/02/28/07/42/european-shorthair-8601492_640.jpg"
+        alt="meow1" class="myslides"
+      />
+      <img
+        src="https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg"
+        alt="meow2" class="myslides"
+      />
+      <img
+        src="https://www.orangepet.in/cdn/shop/articles/selective-closeup-cute-kitten-floor_1.jpg?v=1693461218"
+        alt="meow3" class="myslides"
+      />
+    </div>
+    <script>
+      var index = 0;
+
+      function carousel() {
+        var i;
+
+        var x = document.getElementsByClassName("myslides");
+
+        for (i = 0; i < x.length; i++) {
+          ``;
+
+          x[i].style.display = "none";
+        }
+
+        index++;
+
+        if (index > x.length) {
+          index = 1;
+        }
+
+        x[index - 1].style.display = "block";
+
+        setTimeout(carousel, 2000);
+      }
+
+      carousel(); // Start the carousel when the page loads
+    </script>
+  </body>
+</html>
